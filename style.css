@@ -1,0 +1,395 @@
+/* style.css */
+
+/* Base Styles */
+:root {
+  --primary-color: #c70000;
+  --secondary-color: #333;
+  --accent-color: #007bff;
+  --text-color: #333;
+  --light-gray: #f8f9fa;
+  --dark-gray: #6c757d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.main-header {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.header-top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.header-links a:hover {
+  opacity: 0.8;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: 2rem;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.nav-right button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+/* Breaking News Ticker */
+.breaking-news {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 0;
+  margin: 1rem 0;
+}
+
+.breaking-label {
+  font-weight: bold;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.ticker {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Featured Grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.main-feature {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.main-feature img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.main-feature:hover img {
+  transform: scale(1.05);
+}
+
+.feature-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+}
+
+.category {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.category.world {
+  background: #28a745;
+}
+
+.category.tech {
+  background: #17a2b8;
+}
+
+.category.politics {
+  background: #dc3545;
+}
+
+.secondary-features {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.secondary-feature {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.secondary-feature img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Story Grid */
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.story-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.story-content {
+  padding: 1.5rem;
+}
+
+/* Opinion Section */
+.opinion-section {
+  margin: 3rem 0;
+}
+
+.opinion-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.author-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+/* Footer Styles */
+.main-footer {
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-links img {
+  width: 24px;
+  margin-right: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  border-top: 1px solid #555;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-feature img {
+    height: 350px;
+  }
+
+  .secondary-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .ticker {
+    animation: marquee 15s linear infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-top .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-links {
+    margin-top: 0.5rem;
+  }
+
+  .feature-content {
+    padding: 1rem;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}

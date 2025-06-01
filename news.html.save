@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sc>
+    <title>DEVOPS & SECOPS Treands</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="date-time">Monday, May 22, 2025</div>
+                <div class="header-links">
+                    <a href="#" class="weather">🌤 24°C, New Delhi>
+                    <a href="#" class="subscribe">Subscribe</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav container">
+            <div class="logo">
+                <a href="#"><h1>News360</h1></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">India</a></li>
+                <li><a href="#">World</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Technology</a></li>
+ <li><a href="#">Technology</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Science</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="search-btn">🔍</button>
+                <button class="menu-btn">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Breaking News Ticker -->
+        <section class="breaking-news">
+            <div class="breaking-label">BREAKING:</div>
+            <div class="ticker">
+                <span>• Massive earthquake hits Indonesia • PM to>
+            </div>
+        </section>
+
+        <!-- Featured Story Grid -->
+        <section class="featured-grid">
+            <article class="main-feature">
+                <img src="images/feature1.jpg" alt="Main Feature">
+                <div class="feature-content">
