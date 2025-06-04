@@ -17,3 +17,4 @@ EXPOSE 80
 
 # Start nginx (default command)
 CMD ["nginx", "-g", "daemon off;"]
+COPY default.conf /etc/nginx/conf.d/default.conf
