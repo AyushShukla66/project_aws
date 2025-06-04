@@ -8,7 +8,7 @@ RUN rm -rf /usr/share/nginx/html/*
 #COPY news.html /usr/share/nginx/html/
 #COPY default.conf /etc/nginx/conf.d/default.conf
 COPY * /usr/share/nginx/html/index.html
-COPY style.css /usr/share/nginx/html/
+COPY * /usr/share/nginx/html/style.css
 
 # Expose port 80 (default nginx port)
 EXPOSE 30080
